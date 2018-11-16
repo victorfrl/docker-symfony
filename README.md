@@ -1,7 +1,7 @@
 docker-symfony
 ==============
 
-[![Build Status](https://secure.travis-ci.org/eko/docker-symfony.png?branch=master)](http://travis-ci.org/eko/docker-symfony)
+[![Build Status](https://travis-ci.org/victorfrl/docker-symfony.svg?branch=master)](https://travis-ci.org/victorfrl/docker-symfony)
 
 
 This is a complete stack for running Symfony 4 (latest version: Flex) into Docker containers using docker-compose tool.
@@ -11,10 +11,10 @@ This is a complete stack for running Symfony 4 (latest version: Flex) into Docke
 First, clone this repository:
 
 ```bash
-$ git clone https://github.com/eko/docker-symfony.git
+$ git clone https://github.com/vfrestrepo/docker-symfony.git
 ```
 
-Next, put your Symfony application into `symfony` folder and do not forget to add `symfony.localhost` in your `/etc/hosts` file.
+Next, put your Symfony application into `symfony` folder and do not forget to add `symfony.local` in your `/etc/hosts` file.
 
 Make sure you adjust `database_host` in `parameters.yml` to the database container alias "db"
 
@@ -24,7 +24,7 @@ Then, run:
 $ docker-compose up
 ```
 
-You are done, you can visit your Symfony application on the following URL: `http://symfony.localhost` (and access Kibana on `http://symfony.localhost:81`)
+You are done, you can visit your Symfony application on the following URL: `http://symfony.local` (and access Kibana on `http://symfony.local:81`)
 
 _Note :_ you can rebuild all Docker images by running:
 
@@ -62,7 +62,7 @@ You can access Nginx and Symfony application logs in the following directories o
 
 # Use Kibana!
 
-You can also use Kibana to visualize Nginx & Symfony logs by visiting `http://symfony.localhost:81`.
+You can also use Kibana to visualize Nginx & Symfony logs by visiting `http://symfony.local:81`.
 
 # Use xdebug!
 
